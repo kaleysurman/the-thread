@@ -1,13 +1,59 @@
 <html>
-<head>
+  <head>
+  </head>
 
-<title>The Thread.</title>
+  <body>
 
-</head>
+    <h1>Gigi's Collection</h1>
 
-<body>
+    <p>Yay! Expensive fashion!</p>
 
-<p>The Thread.</p>
+    <h2></h2>
+    <p id="item"></p>
+    <p id="color"></p>
+    <p id="cost"></p>
+    <p id="purchase"></p>
 
-</body>
+    <script>
+
+      var collection = [
+        { item: "Stalvey Top Handle Mini Handbag",
+          color: "White Alligator",
+          cost: "$11,500",
+          purchase: "https://www.stalvey.com/product/top-handle-mini-handbag-white-alligator/"
+        }
+        { item: "The Last Lolita Adam Selman x Le Specs Sunglasses",
+          color: "Crystal Grey",
+          cost: "$119",
+          purchase: "https://lespecs.com/the-last-lolita-1702127-crystal-grey-brass-mirror-las1702127"
+        }
+        { item: "Sally LaPointe Lightweight Asymmetrical Sweater",
+          color: "Blue",
+          cost: "$790",
+          purchase: "https://www.modaoperandi.com/sally-lapointe-r18/lightweight-asymmetrical-sweater"
+        }
+        { item: "Sally LaPointe Silk Paperbag Pants",
+          color: "Blue",
+          cost: "$1,290",
+          purchase: "https://www.modaoperandi.com/sally-lapointe-r18#lkcell-128283"
+        }
+        { item: "Stuart Weitzman Clingy Boots",
+          color: "Patent Snow White",
+          cost: "$575",
+          purchase: "https://www.stuartweitzman.com/products/clingy/snow-white-leather/?sid=295228&"
+        }
+      ]
+
+      var h2El = document.querySelector("h2");
+      var colorEl = document.querySelector("#color");
+      var costEl = document.querySelector("#cost");
+      var purchaseEl = document.querySelector("#purchase");
+
+      h2El.textContent = collection[0].item
+      colorEl.innerHTML = "<strong>Color:</strong> " + collection[0].color
+      costEl.innerHTML = "<strong>Cost:</strong> " + collection[0].cost
+      purchaseEl.innerHTML = "<strong>Purchase:</strong> " + collection[0].purchase
+
+    </script>
+  </body>
 </html>
