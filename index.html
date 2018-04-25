@@ -1,46 +1,135 @@
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <title>The Thread.</title>
+    <style>
+      div {
+        width: 0px;
+        height: 0px;
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+      /* grid-column-gap: 10px; */
+        line-height: 1.55;
+      }
+
+      section {
+        border: 1px solid #ccc;
+      }
+
+      #purse {
+        grid-column: 1 / 2;
+        grid-row: 2 / 2;
+      }
+
+      #sunglasses {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+
+      #sweater {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+
+      #pants {
+        grid-column: 3 / 4;
+        grid-row: 1 / span 3;
+      }
+
+      #boots {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+      }
+
+    </style>
   </head>
 
   <body>
 
-    <h1>Gigi's Collection</h1>
+    <h1>Dress Like Gigi Hadid,
+      Styled by Mimi Cuttrell</h1>
 
-    <p>Yay! Expensive fashion!</p>
+    <p>Supermodel Gigi Hadid sets trends months before they become popular. This outfit below is one example. Gigi wore this outfit last October and now in April monochrome sets, paperbag pants and pastels are trending.</p>
+
+    <main>
+      <section id="purse">
+        <div id="purse"></div>
+        <img src="purse.jpg" id="0" width=250px height=200px />
+      </section>
+
+      <section id="sunglasses">
+          <div id="sunglasses"></div>
+        <img src="sunglasses.jpg" id="1" width=200px height=150px />
+      </section>
+
+      <section id="sweater">
+          <div id="sweater"></div>
+        <img src="sweater.jpg" id="2" width=150px height=200px />
+      </section>
+
+      <section id="pants">
+        <div id="pants"></div>
+        <img src="pants.jpg" id="3" width=275px height=400px />
+      </section>
+
+      <section id="boots">
+        <div id="boots"></div>
+        <img src="boots.jpg" id="4" width=250px height=200px />
+      </section>
+
+    </main>
+
 
     <h2></h2>
     <p id="item"></p>
     <p id="color"></p>
     <p id="cost"></p>
     <p id="purchase"></p>
+    <p id="company"></p>
+
+    <!-- images here -->
 
     <script>
 
       var collection = [
+        // [0]
         { item: "Stalvey Top Handle Mini Handbag",
           color: "White Alligator",
           cost: "$11,500",
-          purchase: "https://www.stalvey.com/product/top-handle-mini-handbag-white-alligator/"
-        }
-        { item: "The Last Lolita Adam Selman x Le Specs Sunglasses",
+          purchase: "https://www.stalvey.com/product/top-handle-mini-handbag-white-alligator/",
+          company: "Stalvey"
+        },
+        // [1]
+        { item: "Adam Selman Le Specs Sunglasses in the Last Lolita",
           color: "Crystal Grey",
           cost: "$119",
-          purchase: "https://lespecs.com/the-last-lolita-1702127-crystal-grey-brass-mirror-las1702127"
-        }
+          purchase: "https://lespecs.com/the-last-lolita-1702127-crystal-grey-brass-mirror-las1702127",
+          company: "Le Specs"
+        },
+        // [2]
         { item: "Sally LaPointe Lightweight Asymmetrical Sweater",
           color: "Blue",
           cost: "$790",
-          purchase: "https://www.modaoperandi.com/sally-lapointe-r18/lightweight-asymmetrical-sweater"
-        }
+          purchase: "https://www.modaoperandi.com/sally-lapointe-r18/lightweight-asymmetrical-sweater",
+          company: "Sally LaPointe"
+        },
+        // [3]
         { item: "Sally LaPointe Silk Paperbag Pants",
           color: "Blue",
           cost: "$1,290",
-          purchase: "https://www.modaoperandi.com/sally-lapointe-r18#lkcell-128283"
-        }
+          purchase: "https://www.modaoperandi.com/sally-lapointe-r18#lkcell-128283",
+          company: "Sally La Pointe"
+        },
+        // [4]
         { item: "Stuart Weitzman Clingy Boots",
           color: "Patent Snow White",
           cost: "$575",
-          purchase: "https://www.stuartweitzman.com/products/clingy/snow-white-leather/?sid=295228&"
+          purchase: "https://www.stuartweitzman.com/products/clingy/snow-white-leather/?sid=295228&",
+          company: "Stuart Weitzman"
         }
       ]
 
@@ -49,10 +138,32 @@
       var costEl = document.querySelector("#cost");
       var purchaseEl = document.querySelector("#purchase");
 
+
+      var purseEl = document.querySelector("purse");
+      purseEl.addEventListener("click", function(event) {
+        console.log(event.target.id);
+        var target = event.target.id;
+        var focus = target.split("_");
+
+        h2El.textContent = collection[0].item
+        colorEl.innerHTML = "<strong>Color:</strong> " + collection[0].color
+        costEl.innerHTML = "<strong>Cost:</strong> " + collection[0].cost
+        purchaseEl.innerHTML = "<strong>Purchase:</strong> " + "<a href='" + collection[0].purchase + "'>Buy from " + collection[0].company + "</a>"
+      });
+
+
+
+
+      var h2El = document.querySelector("h2");
+      var colorEl = document.querySelector("#color");
+      var costEl = document.querySelector("#cost");
+      var purchaseEl = document.querySelector("#purchase");
+
+
       h2El.textContent = collection[0].item
       colorEl.innerHTML = "<strong>Color:</strong> " + collection[0].color
       costEl.innerHTML = "<strong>Cost:</strong> " + collection[0].cost
-      purchaseEl.innerHTML = "<strong>Purchase:</strong> " + collection[0].purchase
+      purchaseEl.innerHTML = "<strong>Purchase:</strong> " + "<a href='" + collection[0].purchase + "'>Buy from " + collection[0].company + "</a>"
 
     </script>
   </body>
