@@ -1,240 +1,58 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1;" />
     <title>The Thread.</title>
-    <style>
-
-    @import url('https://fonts.googleapis.com/css?family=Lato:300|Questrial');
-
-/*
-    #wrapper {
-      max-width: 960px;
-      margin: 0 auto;
-      border: 1px solid #ccc;
-      padding: 20px;
-      /*transform: rotate(1.25deg);*/
-
-
-    body {
-      background-color: rgb(216,212,238);
-      margin: 20px;
-      font-family: "Questrial", "Helvetica", "Arial", sans-serif;
-      color: #000;
-      font-size: 30px;
-      line-height: 10px;
-      /* margin: 50px; */
-
-    }
-
-    #wrapper {
-      background-color: #fff;
-      padding: 10px;
-    }
-
-      /* section {
-        border: 1px solid #ccc;
-      } */
-
-      #intro {
-        font-family: "Lato", "Helvetica", "Arial", sans-serif;
-        color: #000;
-        font-size: 13px;
-        grid-area: intro;
-        padding-bottom: 20px;
-        img {
-          width: 100%;
-          height: auto;
-        }
-      }
-
-      #purse {
-        grid-area: purse;
-        img {
-          width: 100%;
-          height: auto;
-        }
-        /* grid-column: 1 / 2;
-        grid-row: 2 / 2; */
-      }
-
-      #sunglasses {
-        grid-area: sunglasses;
-        img {
-          width: 100%;
-          height: auto;
-        }
-        /* grid-column: 1 / 2;
-        grid-row: 1 / 2; */
-      }
-
-      #sweater {
-        grid-area: sweater;
-        img {
-          width: 100%;
-          height: auto;
-        }
-        /* grid-column: 2 / 3;
-        grid-row: 1 / 2; */
-      }
-
-      #pants {
-        grid-area: pants;
-        img {
-          width: 100%;
-          height: auto;
-        }
-        /* grid-column: 3 / 4;
-        grid-row: 1 / span 3; */
-      }
-
-      #boots {
-        grid-area: boots;
-        img {
-          width: 100%;
-          height: auto;
-        }
-        /* grid-column: 2 / 3;
-        grid-row: 2 / 3; */
-      }
-
-      main {
-        display: grid;
-        grid-template-areas:
-        "intro intro sweater pants"
-        "purse boots sunglasses pants";
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 350px;
-      /* grid-column-gap: 10px; */
-        line-height: 1.55;
-        font-family: "Lato", "Helvetica", "Arial", sans-serif;
-        color: #000;
-        font-size: 14px;
-      }
-
-    </style>
+    <link href="css/style.css" media="screen" rel="stylesheet" />
+    <link href="css/mobile.css" media="screen" rel="stylesheet" />
   </head>
 
   <body>
     <div id="wrapper">
 
-    <h1>DRESS LIKE GIGI HADID</h1>
-    <h2>STYLED BY MIMI CUTTRELL</h2>
+      <header>
+        <h1>Dress Like Gigi Hadid</h1>
+        <h2>Styled by Mimi Cuttrell</h2>
+      </header>
 
-    <main>
-      <section id="intro">
-      <p>Supermodel Gigi Hadid sets trends months before they become popular. This outfit below is one example. Gigi wore this outfit last October and now in April monochrome sets, paperbag pants and pastels are trending. Each piece of the outfit seen on Gigi Hadid is available to purchase.</p>
+      <main>
+        <section id="intro">
+          <p>Supermodel Gigi Hadid sets trends months before they become popular. This outfit below is one example. Gigi wore this outfit last October and now in April monochrome sets, paperbag pants and pastels are trending. Each piece of the outfit seen on Gigi Hadid is available to purchase.</p>
 
-      <p>Click on the images below to learn more about each product and where to purchase them.</p>
+          <p>Click on the images below to learn more about each product and where to purchase them.</p>
 
-      <div>
-      <h2 id="title"></h2>
-      <p id="item"></p>
-      <p id="color"></p>
-      <p id="cost"></p>
-      <p id="purchase"></p>
-      <p id="company"></p>
-      </div>
-      </section>
+          <div>
+            <h2 id="title"></h2>
+            <p id="item"></p>
+            <p id="color"></p>
+            <p id="cost"></p>
+            <p id="purchase"></p>
+            <p id="company"></p>
+          </div>
+        </section>
 
-      <section id="purse">
-        <img src="purse_.jpg" id="0" />
-      </section>
+        <section id="purse">
+          <img src="img/purse.jpg" id="0" />
+        </section>
 
-      <section id="sunglasses">
-        <img src="sunglasses_.jpg" id="1" />
-      </section>
+        <section id="sunglasses">
+          <img src="img/sunglasses-alt.jpg" id="1" />
+        </section>
 
-      <section id="sweater">
-        <img src="sweater_.jpg" id="2"  />
-      </section>
+        <section id="sweater">
+          <img src="img/sweater.jpg" id="2"  />
+        </section>
 
-      <section id="pants">
-        <img src="pants_.jpg" id="3" />
-      </section>
+        <section id="pants">
+          <img src="img/pants.jpg" id="3" />
+        </section>
 
-      <section id="boots">
-        <img src="boots_.jpg" id="4" />
-      </section>
+        <section id="boots">
+          <img src="img/boots.jpg" id="4" />
+        </section>
 
-    </main>
-  </div>
-
-
-    <!-- images here -->
-
-    <script>
-
-      var collection = [
-        // [0]
-        { item: "Stalvey Top Handle Mini Handbag",
-          color: "White Alligator",
-          cost: "$11,500",
-          purchase: "https://www.stalvey.com/product/top-handle-mini-handbag-white-alligator/",
-          company: "Stalvey"
-        },
-        // [1]
-        { item: "Adam Selman Le Specs Sunglasses in the Last Lolita",
-          color: "Crystal Grey",
-          cost: "$119",
-          purchase: "https://lespecs.com/the-last-lolita-1702127-crystal-grey-brass-mirror-las1702127",
-          company: "Le Specs"
-        },
-        // [2]
-        { item: "Sally LaPointe Lightweight Asymmetrical Sweater",
-          color: "Blue",
-          cost: "$790",
-          purchase: "https://www.modaoperandi.com/sally-lapointe-r18/lightweight-asymmetrical-sweater",
-          company: "Sally LaPointe"
-        },
-        // [3]
-        { item: "Sally LaPointe Silk Paperbag Pants",
-          color: "Blue",
-          cost: "$1,290",
-          purchase: "https://www.modaoperandi.com/sally-lapointe-r18#lkcell-128283",
-          company: "Sally La Pointe"
-        },
-        // [4]
-        { item: "Stuart Weitzman Clingy Boots",
-          color: "Patent Snow White",
-          cost: "$575",
-          purchase: "https://www.stuartweitzman.com/products/clingy/snow-white-leather/?sid=295228&",
-          company: "Stuart Weitzman"
-        }
-      ]
-
-      var h2El = document.querySelector("#title");
-      var colorEl = document.querySelector("#color");
-      var costEl = document.querySelector("#cost");
-      var purchaseEl = document.querySelector("#purchase");
-
-
-      var mainEl = document.querySelector("main");
-      mainEl.addEventListener("click", function(event) {
-        console.log(event.target.id);
-        var target = event.target.id;
-        var focus = target.split("_");
-        console.log(focus)
-
-        h2El.textContent = collection[focus[0]].item
-        colorEl.innerHTML = "<strong>Color:</strong> " + collection[focus[0]].color
-        costEl.innerHTML = "<strong>Cost:</strong> " + collection[focus[0]].cost
-        purchaseEl.innerHTML = "<strong>Purchase:</strong> " + "<a href='" + collection[focus[0]].purchase + "'>Buy from " + collection[focus[0]].company + "</a>"
-      });
-
-
-
-
-      // var h2El = document.querySelector("h2");
-      // var colorEl = document.querySelector("#color");
-      // var costEl = document.querySelector("#cost");
-      // var purchaseEl = document.querySelector("#purchase");
-
-
-      // h2El.textContent = collection[0].item
-      // colorEl.innerHTML = "<strong>Color:</strong> " + collection[0].color
-      // costEl.innerHTML = "<strong>Cost:</strong> " + collection[0].cost
-      // purchaseEl.innerHTML = "<strong>Purchase:</strong> " + "<a href='" + collection[0].purchase + "'>Buy from " + collection[0].company + "</a>"
-
-    </script>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300|Questrial');
+
+body {
+  background-color: rgb(216,212,238);
+  margin: 20px;
+  color: #000;
+  /* margin: 50px; */
+}
+
+#wrapper {
+  background-color: #fff;
+  padding: 10px;
+}
+
+a,
+a:visited {
+  color: rgb(197,164,144);
+
+}
+
+a:hover {
+  color: rgb(180,205,191);
+}
+
+h1,
+h2 {
+  font-family: "Questrial", "Helvetica", "Arial", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 45px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#intro {
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  color: #000;
+  line-height: 1.55;
+  padding-bottom: 20px;
+  font-size: 20px;
+  grid-area: intro;
+}
+
+#intro p:first-child {
+  margin-top: 20px;
+}
+
+#intro h2 {
+  font-size: 20px;
+}
+
+#intro h2,
+#intro h2 ~ p {
+  margin: 0;
+}
+
+#purse {
+  grid-area: purse;
+}
+
+#sunglasses {
+  grid-area: sunglasses;
+}
+
+#sweater {
+  grid-area: sweater;
+}
+
+#pants {
+  grid-area: pants;
+}
+
+#boots {
+  grid-area: boots;
+}
+
+header {
+  text-transform: uppercase;
+}
+
+main {
+  display: grid;
+  grid-template-areas:
+  "intro intro sweater pants"
+  "purse boots sunglasses pants";
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: 350px; */
+  /* grid-column-gap: 10px; */
+}
+
+
+#purse_info {
+  display: none;
+}
